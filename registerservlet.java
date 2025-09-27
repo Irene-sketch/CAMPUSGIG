@@ -3,7 +3,7 @@ package com.campusgig.servlets;
 import com.campusgig.model.User;
 import com.campusgig.utils.FileHandler;
 
-import javax.servlet.*;
+import javax.servlet.*
 import javax.servlet.http.*;
 import java.io.*;
 
