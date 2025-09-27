@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applications - CampusGig</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-6 shadow-lg">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-3xl font-bold">📂 My Applications</h1>
+      <a href="home.html" class="text-sm bg-gray-200 text-blue-800 px-4 py-2 rounded-full hover:bg-gray-300 transition">⬅ Dashboard</a>
+    </div>
+  </header>
+
+  <!-- Applications List -->
+  <main class="container mx-auto px-6 py-12 flex-grow">
+    <div class="bg-white p-8 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">Track Your Applications</h2>
+
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-gray-100 text-left">
+            <th class="py-3 px-4 border">Job Title</th>
+            <th class="py-3 px-4 border">Company</th>
+            <th class="py-3 px-4 border">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="py-3 px-4 border">Campus Photographer</td>
+            <td class="py-3 px-4 border">Student Council</td>
+            <td class="py-3 px-4 border text-green-600 font-semibold">Accepted</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 border">Research Assistant</td>
+            <td class="py-3 px-4 border">Prof. Sharma</td>
+            <td class="py-3 px-4 border text-yellow-600 font-semibold">Pending</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 border">Math Tutor</td>
+            <td class="py-3 px-4 border">Student Help Center</td>
+            <td class="py-3 px-4 border text-red-600 font-semibold">Rejected</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="bg-gray-200 text-center py-6 text-gray-600 text-sm">
+    © 2025 CampusGig. Manage your job applications.
+  </footer>
+
+</body>
+</html>
