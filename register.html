@@ -1,112 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusGig Registration</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Optional: overlay for semi-transparent effect */
-        .overlay {
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Job - CampusGig</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body class="flex items-center justify-center min-h-screen p-4 bg-gray-100">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
 
-    <!-- Registration Form Container with background logo -->
-    <div class="rounded-3xl shadow-xl max-w-lg w-full relative overflow-hidden" 
-         style="background-image: url('logo.png'); background-size: cover; background-position: center;">
+  <div class="bg-white p-10 rounded-3xl shadow-2xl max-w-2xl w-full">
+    <!-- Title -->
+    <h1 class="text-4xl font-extrabold text-blue-800 text-center mb-8">Post a New Job</h1>
 
-        <!-- Overlay for readability -->
-        <div class="overlay p-8 md:p-12">
-            <div class="text-center mb-8">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800">
-                    Join CampusGig
-                </h1>
-            </div>
-            
-            <form id="registrationForm" class="space-y-6">
-                <div>
-                    <label for="fullName" class="block text-sm font-medium text-gray-700">Full Name</label>
-                    <div class="mt-1">
-                        <input type="text" id="fullName" name="fullName" required
-                               class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 ease-in-out"
-                               placeholder="e.g., Jane Doe">
-                    </div>
-                </div>
-                
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                    <div class="mt-1">
-                        <input type="email" id="email" name="email" required
-                               class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 ease-in-out"
-                               placeholder="you@college.edu">
-                    </div>
-                </div>
-                
-                <div>
-                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                    <div class="mt-1">
-                        <input type="password" id="password" name="password" required
-                               class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 ease-in-out"
-                               placeholder="Create a strong password">
-                    </div>
-                </div>
+    <form class="space-y-6">
+      <!-- Job Title -->
+      <div>
+        <label class="block text-sm font-bold text-gray-700 mb-2">Job Title</label>
+        <input type="text" placeholder="e.g., Event Helper" class="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+      </div>
 
-                <div>
-                    <label for="confirmPassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
-                    <div class="mt-1">
-                        <input type="password" id="confirmPassword" name="confirmPassword" required
-                               class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 ease-in-out"
-                               placeholder="Confirm your password">
-                    </div>
-                </div>
-                
-                <div>
-                    <button type="submit"
-                            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-lg font-bold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 ease-in-out">
-                        Register
-                    </button>
-                </div>
-            </form>
-            
-            <div id="messageBox" class="mt-6 text-center hidden">
-                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-xl relative" role="alert">
-                    <strong class="font-bold">Success!</strong>
-                    <span class="block sm:inline">Registration successful!</span>
-                </div>
-            </div>
-        </div>
-    </div>
+      <!-- Category -->
+      <div>
+        <label class="block text-sm font-bold text-gray-700 mb-2">Category</label>
+        <select class="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+          <option>🎨 Design</option>
+          <option>📚 Tutoring</option>
+          <option>🎉 Event Help</option>
+          <option>💻 Technical</option>
+        </select>
+      </div>
 
-    <script>
-        document.getElementById('registrationForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-            const messageBox = document.getElementById('messageBox');
-            
-            if (password !== confirmPassword) {
-                messageBox.classList.remove('hidden', 'bg-green-100', 'border-green-400', 'text-green-700');
-                messageBox.classList.add('bg-red-100', 'border-red-400', 'text-red-700');
-                messageBox.innerHTML = '<strong class="font-bold">Error!</strong><span class="block sm:inline"> Passwords do not match.</span>';
-                return;
-            }
-            
-            console.log('Form submitted successfully!');
-            
-            // Show success message
-            messageBox.classList.remove('hidden', 'bg-red-100', 'border-red-400', 'text-red-700');
-            messageBox.classList.add('bg-green-100', 'border-green-400', 'text-green-700');
-            messageBox.innerHTML = '<strong class="font-bold">Success!</strong><span class="block sm:inline"> Registration successful!</span>';
-        });
-    </script>
+      <!-- Description -->
+      <div>
+        <label class="block text-sm font-bold text-gray-700 mb-2">Description</label>
+        <textarea rows="4" placeholder="Describe the job in detail..." class="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
+      </div>
+
+      <!-- Payment -->
+      <div>
+        <label class="block text-sm font-bold text-gray-700 mb-2">Payment (₹)</label>
+        <input type="number" placeholder="e.g., 500" class="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+      </div>
+
+      <!-- Deadline -->
+      <div>
+        <label class="block text-sm font-bold text-gray-700 mb-2">Deadline</label>
+        <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+      </div>
+
+      <!-- Button -->
+      <button type="submit" class="w-full py-3 mt-4 bg-blue-700 text-white font-bold rounded-full shadow-lg hover:bg-blue-800 transform hover:scale-105 transition duration-300">
+        🚀 Post Job
+      </button>
+    </form>
+  </div>
+
 </body>
 </html>
