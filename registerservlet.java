@@ -18,6 +18,6 @@ public class RegisterServlet extends HttpServlet {
         User user = new User(username, password, email);
         FileHandler.saveUser(user);
 
-        response.sendRedirect("login.html"); // redirect to login page
+        response.sendRedirect("login1.html"); // redirect to login page
     }
 }
