@@ -1,29 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dashboard - CampusGig</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #f9f9f9; }
-        header { background: #004080; color: white; padding: 15px; text-align: center; }
-        nav { background: #0066cc; padding: 10px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .container { width: 60%; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.2); }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusGig - Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body>
-<header><h1>CampusGig Dashboard</h1></header>
-<nav>
-    <a href="postJob.html">Post Job</a>
-    <a href="jobBoard.html">Browse Jobs</a>
-    <a href="search.html">Search</a>
-    <a href="profile.html">Profile</a>
-    <a href="applicationTracker.html">Applications</a>
-    <a href="logout.html">Logout</a>
-</nav>
-<div class="container">
-    <h2>Welcome!</h2>
-    <p>Select an option from the menu above.</p>
-</div>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-5 shadow-lg">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-3xl font-bold">CampusGig Dashboard</h1>
+      <a href="logout.html" class="text-sm bg-red-500 px-4 py-2 rounded-full hover:bg-red-600 transition">Logout</a>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="bg-blue-700 text-white py-3">
+    <div class="container mx-auto px-6 flex justify-center space-x-6">
+      <a href="postJob.html" class="hover:underline">Post Job</a>
+      <a href="jobBoard.html" class="hover:underline">Browse Jobs</a>
+      <a href="search.html" class="hover:underline">Search</a>
+      <a href="profile.html" class="hover:underline">Profile</a>
+      <a href="applicationTracker.html" class="hover:underline">Applications</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto px-6 py-12">
+    <div class="bg-white rounded-2xl shadow-md p-10">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">🎓 Welcome to CampusGig</h2>
+      <p class="text-gray-600 mb-10 text-lg">Your one-stop hub for freelance and part-time campus opportunities. Choose an option below to get started.</p>
+
+      <!-- Dashboard Cards Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Post a Job -->
+        <a href="post.html" class="p-8 bg-blue-50 rounded-2xl shadow hover:shadow-xl transition flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-blue-800">📌 Post a Job</h3>
+            <p class="text-gray-600 mt-3">Offer freelance or part-time gigs for other students.</p>
+          </div>
+        </a>
+
+        <!-- Browse Jobs -->
+        <a href="jobBoard.html" class="p-8 bg-green-50 rounded-2xl shadow hover:shadow-xl transition flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-green-800">💼 Browse Jobs</h3>
+            <p class="text-gray-600 mt-3">Find jobs and gigs posted by students and faculty.</p>
+          </div>
+        </a>
+
+        <!-- Search -->
+        <a href="search.html" class="p-8 bg-yellow-50 rounded-2xl shadow hover:shadow-xl transition flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-700">🔎 Search</h3>
+            <p class="text-gray-600 mt-3">Look up gigs by skill, category, or deadline.</p>
+          </div>
+        </a>
+
+        <!-- Profile -->
+        <a href="profile.html" class="p-8 bg-purple-50 rounded-2xl shadow hover:shadow-xl transition flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-purple-800">👤 My Profile</h3>
+            <p class="text-gray-600 mt-3">Update your details, showcase skills, and manage gigs.</p>
+          </div>
+        </a>
+
+        <!-- Applications -->
+        <a href="applicationTracker.html" class="p-8 bg-pink-50 rounded-2xl shadow hover:shadow-xl transition flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-pink-700">📂 Applications</h3>
+            <p class="text-gray-600 mt-3">Track your job applications and statuses in one place.</p>
+          </div>
+        </a>
+
+        <!-- Logout -->
+        <a href="logout.html" class="p-8 bg-red-50 rounded-2xl shadow hover:shadow-xl transition flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-red-700">🚪 Logout</h3>
+            <p class="text-gray-600 mt-3">Log out safely from your account.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-center py-6 text-gray-600 text-sm">
+    © 2025 CampusGig. Built for students, by students.
+  </footer>
+
 </body>
 </html>
