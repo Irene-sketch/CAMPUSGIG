@@ -8,11 +8,27 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Font -->
+  <!-- Google Font + Custom Animation -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
     body {
       font-family: 'Inter', sans-serif;
+    }
+
+    /* Custom float animation */
+    @layer utilities {
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+      .animate-float {
+        animation: float 2s ease-in-out infinite;
+      }
     }
   </style>
 </head>
@@ -23,7 +39,7 @@
     
     <!-- Title -->
     <div class="mb-6 text-center">
-      <h2 class="text-4xl font-extrabold text-blue-800">Create Account</h2>
+      <h2 class="text-4xl font-extrabold text-blue-800 animate-float">Create Account</h2>
       <p class="mt-2 text-slate-500 text-sm">Join Campus Gig and start posting or applying for gigs!</p>
     </div>
 
@@ -98,7 +114,7 @@
     <!-- Already have an account -->
     <div class="mt-6 text-center text-sm text-gray-600">
       Already have an account? 
-      <a href="login1.html" class="text-blue-700 font-bold hover:text-blue-900 transition">Log in</a>
+      <a href="login.html" class="text-blue-700 font-bold hover:text-blue-900 transition">Log in</a>
     </div>
   </div>
 </body>
