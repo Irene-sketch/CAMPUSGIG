@@ -1,3 +1,4 @@
+<!-- FILE: login1.html -->
 <!DOCTYPE html> 
 <html lang="en">
 <head>
@@ -5,69 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Gig Login</title>
 
-    <!-- ✅ Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- ✅ Link to External CSS File -->
     <link rel="stylesheet" href="login1.css">
 
     <style>
-        /* Google Font */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
         body {
             font-family: 'Inter', sans-serif;
         }
 
-        /* Fade-in and slide-down animation */
         @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-20px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
-        /* Subtle pulse animation for title */
         @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.02);
-            }
+            0%, 100% { transform: scale(1); }
+            50%      { transform: scale(1.02); }
         }
 
-        /* Simple fade-in animation */
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to   { opacity: 1; }
         }
 
-        .animate-fadeInDown {
-            animation: fadeInDown 0.8s ease-out forwards;
-        }
-
-        .animate-fadeIn {
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-
-        .animate-pulse-subtle {
-            animation: pulse 2s infinite ease-in-out;
-        }
+        .animate-fadeInDown { animation: fadeInDown 0.8s ease-out forwards; }
+        .animate-fadeIn     { animation: fadeIn 0.8s ease-out forwards; }
+        .animate-pulse-subtle { animation: pulse 2s infinite ease-in-out; }
     </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-r from-blue-100 to-blue-200">
 
-    <!-- Login Container -->
     <div class="w-full max-w-sm bg-white rounded-2xl shadow-2xl p-8 transform transition-all duration-300 hover:scale-105 animate-fadeIn">
 
         <!-- Title -->
@@ -77,9 +50,9 @@
         </div>
 
         <!-- Login Form -->
-        <form class="space-y-6">
+        <form action="login" method="post" class="space-y-6">
 
-            <!-- Username Input Group -->
+            <!-- Username -->
             <div>
                 <label for="username" class="block text-sm font-semibold text-gray-700 mb-1">Username</label>
                 <input 
@@ -92,7 +65,7 @@
                 >
             </div>
 
-            <!-- Password Input Group -->
+            <!-- Password -->
             <div>
                 <label for="password" class="block text-sm font-semibold text-gray-700 mb-1">Password</label>
                 <input 
@@ -105,7 +78,7 @@
                 >
             </div>
 
-            <!-- Log in Button -->
+            <!-- Submit Button -->
             <button 
                 type="submit" 
                 class="w-full py-3 bg-blue-700 text-white font-bold rounded-full shadow-lg hover:bg-blue-800 transform hover:scale-105 transition-all duration-300"
