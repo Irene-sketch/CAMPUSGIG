@@ -16,7 +16,7 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
 
-        File file = new File("users.txt");
+        File file = new File(getServletContext().getRealPath("/") + "users.txt");
         if (!file.exists()) file.createNewFile();
 
         BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -38,7 +38,9 @@ public class RegisterServlet extends HttpServlet {
             writer.write(username + "," + password);
             writer.newLine();
             writer.close();
-            out.println("<h3 style='color:green;'>Registered successfully. <a href='login1.html'>Login here</a></h3>");
+
+            // ✅ Redirect to login page after registration
+            response.sendRedirect("login1.html");
         }
     }
 }
