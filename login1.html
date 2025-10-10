@@ -31,7 +31,7 @@
             }
         }
 
-        /* Subtle lse animation for title */
+        /* Subtle pulse animation for title */
         @keyframes pulse {
             0%, 100% {
                 transform: scale(1);
@@ -64,9 +64,10 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4" style="background-image: url('ss2.png'); background-size: cover; background-position: center;">
 
-    <!- Login Containe -->
+<body class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-r from-blue-100 to-blue-200">
+
+    <!-- Login Container -->
     <div class="w-full max-w-sm bg-white rounded-2xl shadow-2xl p-8 transform transition-all duration-300 hover:scale-105 animate-fadeIn">
 
         <!-- Title -->
@@ -118,7 +119,6 @@
         <div class="mt-8 text-center text-sm text-gray-500">
             New to Campus Gig? 
             <a href="register.html" class="font-bold text-blue-700 hover:text-blue-900 transition-colors duration-200">
-
                 Create an account
             </a>
         </div>
